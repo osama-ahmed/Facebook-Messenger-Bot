@@ -50,7 +50,7 @@ def getWhatsAppDataTXT(personName):
     """
     for currentFile in allFiles:
         myMessage, otherPersonsMessage, currentSpeaker = "","",""
-        with open(currentFile, 'r') as openedFile:
+        with open(currentFile, 'rb') as openedFile:
             allLines = openedFile.readlines()
         for index,line in enumerate(allLines):
             # The sender's name is separated by a ']' or '-' and a ': ' (The whitespace is important)
